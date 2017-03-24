@@ -3,12 +3,12 @@ Section: utils
 Priority: optional
 Maintainer: Ruben Undheim <ruben.undheim@gmail.com>
 Build-Depends: debhelper (>= 9),
-                gnuradio
+                gnuradio,
+                gnuradio-dev
 Standards-Version: 3.9.8
 
 Package: gr-iridium
 Architecture: any
-Pre-Depends: adduser
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, gnuradio
 Description: Receive Iridium packets
  This GNU Radio block lets you receive Iridium packets.
