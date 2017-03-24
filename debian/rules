@@ -9,3 +9,8 @@ include /usr/share/dpkg/default.mk
 
 override_dh_auto_test:
 	
+
+override_dh_auto_install:
+	dh_auto_install
+	mkdir -p debian/gr-iridium/usr/share/gr-iridium/examples
+	cp examples/*.conf debian/gr-iridium/usr/share/gr-iridium/examples/
