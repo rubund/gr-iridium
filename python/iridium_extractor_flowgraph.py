@@ -119,7 +119,7 @@ class FlowGraph(gr.top_block):
 
             if 'device_args' in d:
                 if is_uhd:
-                    source = uhd.usrp_source(d['device-args'], uhd.io_type.COMPLEX_FLOAT32,1)
+                    source = uhd.usrp_source(d['device_args'], uhd.io_type.COMPLEX_FLOAT32,1)
                 else:
                     source = osmosdr.source(args=d['device_args'])
             else:
